@@ -16,11 +16,11 @@ public class test1 {
     userService userservice;
     @Test
     public void test1_1(){
-        List<User> a1=userservice.userList();
-        Iterator it=a1.iterator();
-        while (it.hasNext()){
-            System.out.println(it.next());
-        }
+//        List<User> a1=userservice.userList();
+//        Iterator it=a1.iterator();
+//        while (it.hasNext()){
+//            System.out.println(it.next());
+//        }
     }
 
 }
