@@ -12,4 +12,10 @@ public interface userDao extends JpaRepository<User,Integer> {
 @Query("select u from User u")
 Page<User> findList(Pageable pageable);
 
+    /**
+     *
+     *
+     *
+     */
+    User findByUsername(String username);
 }

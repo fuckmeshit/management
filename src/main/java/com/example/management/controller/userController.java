@@ -21,4 +21,13 @@ public class userController {
     ){
        return userservice.userList(page,size);
     }
+    @CrossOrigin
+    @GetMapping("/user/searchuser")
+    public User getuser(){
+        /**
+         * 这里用来写查找用户返回的数据的内容
+         * 先不写
+         */
+        return null;
+    }
 }
