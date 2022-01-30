@@ -17,5 +17,5 @@ Page<User> findList(Pageable pageable);
      *
      *
      */
-    User findByUsername(String username);
+    List<User> findByUsername(String username);
 }

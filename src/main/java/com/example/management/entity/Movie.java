@@ -2,6 +2,11 @@ package com.example.management.entity;
 
 import javax.persistence.*;
 
+/**
+ * @author 25097
+ * 设置了movie的id，电影名，电影信息，电影类别等这几个信息，实际数据库后期需要更换
+ *
+ */
 @Entity
 @Table(name = "movie")
 public class Movie {

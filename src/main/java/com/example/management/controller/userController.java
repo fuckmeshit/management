@@ -22,12 +22,14 @@ public class userController {
        return userservice.userList(page,size);
     }
     @CrossOrigin
-    @GetMapping("/user/searchuser")
-    public User getuser(){
+    @GetMapping("/usersearch/{username}")
+    public List<User> getuser(
+            @PathVariable("username") String username
+    ) {
         /**
          * 这里用来写查找用户返回的数据的内容
          * 先不写
          */
-        return null;
+        return userservice.findUser(username);
     }
 }

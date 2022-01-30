@@ -19,5 +19,9 @@ public class userService {
         List<User> pageList=userdao.findList(pageable).getContent();
         return pageList;
     }
+    public List<User> findUser(String username){
+        List<User> usersearched=userdao.findByUsername(username);
+        return usersearched;
+    }
 
 }
