@@ -5,7 +5,7 @@ import javax.persistence.*;
 /**
  * @author 25097
  * 设置了movie的id，电影名，电影信息，电影类别等这几个信息，实际数据库后期需要更换
- *
+ * @Date 2022/2/1今天尝试完成一些后台的数据返回的工作
  */
 @Entity
 @Table(name = "movie")
@@ -18,7 +18,7 @@ public class Movie {
     String mvname;
     @Column(name = "mo_information")
     String mvinformation;
-    @Column(name = "type")
+    @Column(name = "mo_type")
     String mvtype;
 
     public int getId() {
