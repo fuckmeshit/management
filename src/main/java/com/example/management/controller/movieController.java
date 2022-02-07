@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.persistence.Column;
 import java.util.List;
 
 
@@ -30,5 +31,12 @@ public class movieController {
             ){
         return movieService.findList(page,size);
 
+    }
+    @CrossOrigin
+    @RequestMapping("/api/moviesearch/{mvname}")
+    public List<Movie> getMovie(
+            @PathVariable("mvname")String mvname
+    ){
+        return movieService.findMovie(mvname);
     }
 }

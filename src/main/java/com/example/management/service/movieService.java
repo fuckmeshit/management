@@ -25,12 +25,15 @@ public class movieService {
         for (Object obj:movieList){
             Map<String,Object>map=new HashMap<>();
             Object[] arr=(Object[]) obj;
-            map.put("mv_id",arr[0]);
-            map.put("mv_name",arr[1]);
-            map.put("mv_information",arr[2]);
-            map.put("mv_type",arr[3]);
+            map.put("id",arr[0]);
+            map.put("mvname",arr[1]);
+            map.put("mvinformation",arr[2]);
+            map.put("mvtype",arr[3]);
             arrayList.add(map);
         }
         return arrayList;
+    }
+    public List<Movie> findMovie(String mvname){
+        return movieDao.findByMvname(mvname);
     }
 }
