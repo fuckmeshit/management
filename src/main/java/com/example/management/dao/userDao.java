@@ -18,4 +18,6 @@ Page<User> findList(Pageable pageable);
      *
      */
     List<User> findByUsername(String username);
+    User findById(int id);
+
 }

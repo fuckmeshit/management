@@ -23,5 +23,18 @@ public class userService {
         List<User> usersearched=userdao.findByUsername(username);
         return usersearched;
     }
+    public User findUpdateUser(int id){
+        User user=userdao.findById(id);
+        return user;
+    }
+    public int updateuser(User user){
+        userdao.save(user);
+        return 1;
+    }
+    public int deleteuser(int id){
+        userdao.deleteById(id);
+        return 1;
+
+    }
 
 }
