@@ -17,4 +17,5 @@ public interface MovieDao extends JpaRepository<Movie,Integer> {
     @Query("select m.id,m.mvname,m.mvinformation,m.mvtype from Movie m")
     Page<Movie> findList(Pageable pageable);
     List<Movie> findByMvname(String mvname);
+    Movie findById(int id);
 }

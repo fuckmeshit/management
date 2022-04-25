@@ -1,6 +1,7 @@
 package com.example.management.controller;
 
 import com.example.management.entity.User;
+import com.example.management.entity.comment;
 import com.example.management.service.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -23,6 +24,7 @@ public class userController {
     ){
        return userservice.userList(page,size);
     }
+
     @CrossOrigin
     @GetMapping("/usersearch/{username}")
     public List<User> getuser(
@@ -75,4 +77,5 @@ public class userController {
             return new Result(500);
         }
     }
+
 }

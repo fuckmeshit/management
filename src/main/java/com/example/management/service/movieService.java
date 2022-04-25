@@ -3,6 +3,8 @@ package com.example.management.service;
 import com.example.management.dao.MovieDao;
 import com.example.management.dao.userDao;
 import com.example.management.entity.Movie;
+import com.example.management.entity.User;
+import com.example.management.entity.comment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -35,5 +37,18 @@ public class movieService {
     }
     public List<Movie> findMovie(String mvname){
         return movieDao.findByMvname(mvname);
+    }
+    public Movie findMovieById(int mvid){
+        Movie movie=movieDao.findById(mvid);
+        return movie;
+    }
+    public int updatemovie(Movie movie){
+        movieDao.save(movie);
+        return 1;
+    }
+    public int deletemovie(int id){
+        movieDao.deleteById(id);
+        return 1;
+
     }
 }
